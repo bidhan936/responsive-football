@@ -38,29 +38,33 @@ p{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 5%;
 }
 .banner{
-    padding-left: 40px;
+    padding-left: 10%;
+    padding-bottom: 5%;
 }
 .banner-title{
     color: #FFFFFF;
-    width: 485px;
+    width: 100%;
     font-size: 64px;
+    margin-bottom: 0;
 }
-.fix-button{
+.fix-button-1, .fix-button-2{
     color: #FFFFFF;
     background-color: #E02C6D;
     font-size: 16px;
     font-weight: 500px;
     width: 168px;
     height: 44px;
+    transition: width 1s, font-size 1s, background-color 1s, transform 1s;
 }
 .thumbnail{
-    width: 100%;
-    padding: 5%;
+    width: 90%;
+    margin: 5% 0;
+    padding-left: 6%;
+    padding-right: 4%;
 }
-.thumbnail img{
+.thumbnail img{   
     width: 100%;
 }
 .fa-arrow-right{
@@ -68,9 +72,15 @@ p{
     width: 16px;
     padding-left: 8px;
 }
-.top-banner:hover .thumbnail{
-    transform:rotate(360deg);
+.top-banner:hover .fix-button-1{
+    transform:translate(80%);
     transition: transform 2s ease-in-out;
+}
+.finalist:hover .fix-button-2{
+    width: 252px;
+    font-size: 25px;
+    background-color: cornflowerblue;
+    transform: scale(1.2);
 }
 /* blogs styles */
 .blogs{
@@ -161,8 +171,11 @@ p{
         display: grid;
         grid-template-columns: repeat(1,1fr);
     }
-    .top-container, .banner, .banner-title, .thumbnail, .footer-logo img{
+    main, .top-container, .banner-title, .thumbnail, .footer-logo img{
         width: 100%;
+    }
+    .thumbnail{
+        padding: 0;
     }
     .thumbnail img{
         width: 100%;
@@ -172,5 +185,7 @@ p{
         height: 100%;
         flex-direction: column;
     }
-    
+    .banner{
+        padding: 0;
+    } 
 }
